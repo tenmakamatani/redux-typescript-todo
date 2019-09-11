@@ -1,6 +1,6 @@
 # react-express-template
 
-reactとexpress apiを使ってWeb開発をする雛形です
+This is a template for web development using react and express api.
 
 ## How to use
 
