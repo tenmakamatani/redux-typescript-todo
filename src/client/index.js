@@ -3,7 +3,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { PassThrough } from "stream";
+import Button from "./component/Button";
 
 class App extends React.Component {
     constructor(props) {
@@ -38,7 +38,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={ this.connectApi.bind(this) }></button>
+                <Button connectAPI={ this.connectApi.bind(this) } />
                 <div>{this.state.api}</div>
             </div>
         );
