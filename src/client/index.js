@@ -3,13 +3,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-import { PassThrough } from "stream";
+import Button from "./component/Button";
+import Routings from "./component/Routings";
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            api: "aaa",
+            api: "test2",
             apiType: "test1"
         };
     }
@@ -38,7 +39,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={ this.connectApi.bind(this) }></button>
+                <Routings />
+                <Button connectAPI={ this.connectApi.bind(this) } />
                 <div>{this.state.api}</div>
             </div>
         );
