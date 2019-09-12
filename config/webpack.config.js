@@ -9,7 +9,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-    entry: ["@babel/polyfill", "./src/client/index.js"],
+    entry: "./src/client/index.js",
     output: {
         path: path.resolve('dist'),
         filename: '[name].js'
