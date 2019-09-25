@@ -1,14 +1,14 @@
-# react-express-template
+# redux-typescript-todo
 
-This is a template for web development using react and express api.
+Simple todo application made by TypeScript and Redux.
 
 ## How to use
 
 ### clone and setup
 
 ```
-$ git clone https://github.com/tenmakamatani/react-express-template.git
-$ cd react-express-template
+$ git clone https://github.com/tenmakamatani/redux-typescript-todo.git
+$ cd redux-typescript-todo
 $ yarn install
 ```
 
