@@ -1,9 +1,7 @@
 import * as React from "react";
 
-const component: React.SFC = () => {
+export default () => {
     return (
-        <div />
-    );
+        <h1>It works!</h1>
+    )
 }
-
-export default component;
