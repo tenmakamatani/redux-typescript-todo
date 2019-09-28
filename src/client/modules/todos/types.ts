@@ -10,9 +10,11 @@ export type AddTodoAction = {
 };
 
 // state types
+export interface ITodo {
+    id: number;
+    text: string;
+}
+
 export interface ITodoState {
-    todos: {
-        id: number;
-        text: string;
-    }[],
+    todos: ITodo[],
 };

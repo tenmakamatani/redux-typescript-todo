@@ -2,6 +2,6 @@ import * as React from "react";
 
 export default () => {
     return (
-        <h1>It works!</h1>
-    )
-}
+        <h1>Hello</h1>
+    );
+};

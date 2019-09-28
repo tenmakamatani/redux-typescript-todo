@@ -19,6 +19,9 @@ export const todoReducer = (state: ITodoState = initState(), action: AddTodoActi
                     },
                 ]
             }
+        
+        default:
+            return state;
 
     }
 }
