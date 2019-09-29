@@ -1,4 +1,6 @@
 import { connect } from "react-redux";
+import { Dispatch, Action } from "redux";
+import { deleteTodo } from "../modules/todos/action";
 
 import { ITodoState } from "../modules/todos/types";
 
@@ -10,6 +12,13 @@ const mapStateToProps = (state: ITodoState) => {
     }
 }
 
+const mapDispatchToProps = (dispatch: Dispatch<Action>) => {
+    return {
+        deleteTodo: (id: number) => dispatch(deleteTodo({ id: id }))
+    }
+}
+
 export default connect(
-    mapStateToProps
+    mapStateToProps,
+    mapDispatchToProps
 )(TodoList)
