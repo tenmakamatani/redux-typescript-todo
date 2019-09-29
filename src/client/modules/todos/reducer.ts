@@ -1,4 +1,4 @@
-import { ITodoState, AddTodoAction } from "./types";
+import { ITodoState, Actions } from "./types";
 
 const initState = (): ITodoState => {
     return {
@@ -6,7 +6,7 @@ const initState = (): ITodoState => {
     };
 };
 
-export const todoReducer = (state: ITodoState = initState(), action: AddTodoAction): ITodoState => {
+export const todoReducer = (state: ITodoState = initState(), action: Actions): ITodoState => {
     switch (action.type) {
 
         case "ADD_TODO":
@@ -18,6 +18,13 @@ export const todoReducer = (state: ITodoState = initState(), action: AddTodoActi
                         text: action.payload.text,
                     },
                 ]
+            }
+        
+        case "DELETE_TODO":
+            return {
+                todos: state.todos.filter(
+                    todo => todo.id != action.payload.id
+                )
             }
         
         default:

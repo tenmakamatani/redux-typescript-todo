@@ -19,6 +19,8 @@ export type DeleteTodoAction = {
     payload: DeleteTodoPayload;
 }
 
+export type Actions = AddTodoAction | DeleteTodoAction;
+
 
 // state types
 export interface ITodo {
