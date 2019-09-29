@@ -10,8 +10,7 @@ export default (props: IProps) => {
     return (
         <div>
             <input type="text" onChange={ (e) => setValue(e.currentTarget.value) }/>
-            <button onClick={props.addTodo(value)}>Add</button>
-            <h1>{ value }</h1>
+            <button onClick={ () => props.addTodo(value) }>Add</button>
         </div>
     )
 }
