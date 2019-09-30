@@ -1,4 +1,4 @@
-import { ITodoState, Actions } from "./types";
+import { ITodoState, ITodo, Actions } from "./types";
 
 const initState = (): ITodoState => {
     return {
@@ -14,17 +14,25 @@ export const todoReducer = (state: ITodoState = initState(), action: Actions): I
                 todos: [
                     ...state.todos,
                     {
-                        id: state.todos.length,
+                        id: state.todos.length + 1,
                         text: action.payload.text,
                     },
                 ]
             }
         
         case "DELETE_TODO":
+            const todos: ITodo[] = [];
+            let id: number = 1;
+            state.todos.forEach((todo: ITodo) => {
+                if (todo.id == action.payload.id) return;
+                todos.push({
+                    id: id,
+                    text: todo.text
+                });
+                id++;
+            });
             return {
-                todos: state.todos.filter(
-                    todo => todo.id != action.payload.id
-                )
+                todos: todos
             }
         
         default:
