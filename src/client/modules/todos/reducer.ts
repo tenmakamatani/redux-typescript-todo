@@ -35,6 +35,19 @@ export const todoReducer = (state: ITodoState = initState(), action: Actions): I
                 todos: todos
             }
         
+        case "UPDATE_TODO":
+            return {
+                todos: state.todos.map((todo) => {
+                    if (todo.id == action.payload.id) {
+                        return {
+                            id: todo.id,
+                            text: action.payload.text
+                        }
+                    }
+                    return todo;
+                })
+            }
+        
         default:
             return state;
 
