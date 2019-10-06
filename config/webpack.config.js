@@ -12,7 +12,8 @@ module.exports = {
     entry: "./src/client/index.tsx",
     output: {
         path: path.resolve('dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: "/"
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js"]
