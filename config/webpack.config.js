@@ -12,10 +12,15 @@ module.exports = {
     entry: "./src/client/index.tsx",
     output: {
         path: path.resolve('dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        publicPath: "/"
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js"]
+        extensions: [".ts", ".tsx", ".js"],
+        alias: {
+            "types": path.resolve(__dirname, "../src/client/types/"),
+            "modules": path.resolve(__dirname, "../src/client/modules/")
+        }
     },
     module: {
         rules: [

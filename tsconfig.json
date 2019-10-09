@@ -1,5 +1,10 @@
 {
     "compilerOptions": {
+        "baseUrl": "src/client",
+        "paths": {
+            "modules/*": ["modules/*"],
+            "types/*": ["types/*"],
+        },
         "strictNullChecks": true,
         "noUnusedLocals": true,
         "noImplicitThis": true,
@@ -14,6 +19,6 @@
         ],
         "module": "ES2015",
         "target": "es5",
-        "jsx": "react"
+        "jsx": "react",
     }
 }

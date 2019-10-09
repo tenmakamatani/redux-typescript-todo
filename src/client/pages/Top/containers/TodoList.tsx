@@ -1,14 +1,14 @@
 import { connect } from "react-redux";
 import { Dispatch, Action } from "redux";
-import { deleteTodo } from "../modules/todos/action";
+import { deleteTodo } from "modules/todos/action";
 
-import { ITodoState } from "../modules/todos/types";
+import IState from "types/state";
 
 import TodoList from "../components/TodoList";
 
-const mapStateToProps = (state: ITodoState) => {
+const mapStateToProps = (state: IState) => {
     return {
-        todos: state.todos
+        todos: state.todoReducer.todos
     }
 }
 

@@ -1,4 +1,4 @@
-import { ITodoState, ITodo, Actions } from "./types";
+import { ITodoState, ITodo, Actions } from "types/todo";
 
 const initState = (): ITodoState => {
     return {
@@ -33,6 +33,19 @@ export const todoReducer = (state: ITodoState = initState(), action: Actions): I
             });
             return {
                 todos: todos
+            }
+        
+        case "UPDATE_TODO":
+            return {
+                todos: state.todos.map((todo) => {
+                    if (todo.id == action.payload.id) {
+                        return {
+                            id: todo.id,
+                            text: action.payload.text
+                        }
+                    }
+                    return todo;
+                })
             }
         
         default:

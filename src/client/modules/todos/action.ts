@@ -1,7 +1,8 @@
 import {
     AddTodoPayload, AddTodoAction,
-    DeleteTodoPayload, DeleteTodoAction
-} from "./types";
+    DeleteTodoPayload, DeleteTodoAction,
+    UpdateTodoPayload, UpdateTodoAction
+} from "types/todo";
 
 export const addTodo = (payload: AddTodoPayload): AddTodoAction => {
     return {
@@ -13,6 +14,13 @@ export const addTodo = (payload: AddTodoPayload): AddTodoAction => {
 export const deleteTodo = (payload: DeleteTodoPayload): DeleteTodoAction => {
     return {
         type: "DELETE_TODO",
+        payload
+    }
+}
+
+export const updateTodo = (payload: UpdateTodoPayload): UpdateTodoAction => {
+    return {
+        type: "UPDATE_TODO",
         payload
     }
 }
