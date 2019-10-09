@@ -2,7 +2,7 @@ import {
     AddTodoPayload, AddTodoAction,
     DeleteTodoPayload, DeleteTodoAction,
     UpdateTodoPayload, UpdateTodoAction
-} from "./types";
+} from "../../types/todo";
 
 export const addTodo = (payload: AddTodoPayload): AddTodoAction => {
     return {

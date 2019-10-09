@@ -1,4 +1,4 @@
-import { ITodoState, ITodo, Actions } from "./types";
+import { ITodoState, ITodo, Actions } from "../../types/todo";
 
 const initState = (): ITodoState => {
     return {
