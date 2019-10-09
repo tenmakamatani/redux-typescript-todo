@@ -16,7 +16,10 @@ module.exports = {
         publicPath: "/"
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js"]
+        extensions: [".ts", ".tsx", ".js"],
+        alias: {
+            "types": path.resolve(__dirname, "/src/client/types")
+        }
     },
     module: {
         rules: [

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { ITodo } from "../../../types/todo";
+import { ITodo } from "types/todo";
 
 interface IProps {
     todos: ITodo[];
