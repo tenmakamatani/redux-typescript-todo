@@ -1,3 +1,5 @@
+import { RouteComponentProps } from "react-router-dom";
+
 // payload types
 export type AddTodoPayload = {
     text: string;
@@ -39,4 +41,9 @@ export interface ITodo {
 
 export interface ITodoState {
     todos: ITodo[],
+}
+
+export interface IState {
+    router: RouteComponentProps;
+    todoReducer: ITodoState;
 }
