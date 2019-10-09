@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": "src/client",
         "paths": {
-            "types/*": ["src/client/types/*"]
+            "modules/*": ["modules/*"],
+            "types/*": ["types/*"],
         },
         "strictNullChecks": true,
         "noUnusedLocals": true,
