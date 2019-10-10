@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import AddTodoForm from "./containers/AddTodoForm";
-import TodoList from "./containers/TodoList";
+import AddTodoForm from "./AddTodoForm";
+import TodoList from "./TodoList";
 
 export default () => {
     return (
