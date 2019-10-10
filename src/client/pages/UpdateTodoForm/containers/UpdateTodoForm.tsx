@@ -2,8 +2,8 @@ import { connect } from "react-redux";
 import { Dispatch, Action } from "redux";
 import { RouteComponentProps } from "react-router";
 
-import { updateTodo } from "modules/todos/action";
-import { ITodoState } from "types/todo";
+import { updateTodo } from "$modules/todos/action";
+import { ITodoState } from "$types/todo";
 import UpdateTodoForm from "../components/UpdateTodoForm";
 
 interface IParam {

@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import { Dispatch, Action } from "redux";
-import { deleteTodo } from "modules/todos/action";
+import { deleteTodo } from "$modules/todos/action";
 
-import IState from "types/state";
+import IState from "$types/state";
 
 import TodoList from "../components/TodoList";
 

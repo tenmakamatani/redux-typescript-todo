@@ -2,7 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import { Redirect } from "react-router";
 
-import { ITodo } from "types/todo";
+import { ITodo } from "$types/todo";
 
 interface IProps {
     todo: ITodo;

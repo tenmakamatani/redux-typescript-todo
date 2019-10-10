@@ -6,7 +6,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Top from "./pages/Top";
 import UpdateTodoForm from "./pages/UpdateTodoForm/index";
-import { store, history } from "modules/todos/store";
+import { store, history } from "$modules/todos/store";
 
 ReactDOM.render(
     <Provider store={ store }>

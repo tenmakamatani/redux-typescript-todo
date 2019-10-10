@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import { Dispatch, Action } from "redux";
-import { addTodo } from "modules/todos/action";
+import { addTodo } from "$modules/todos/action";
 
-import IState from "types/state";
+import IState from "$types/state";
 
 import AddTodoForm from "../components/AddTodoForm";
 
