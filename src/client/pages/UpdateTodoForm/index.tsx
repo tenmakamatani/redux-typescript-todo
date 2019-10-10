@@ -29,7 +29,7 @@ export default (props: IProps) => {
     // Use dispatch function.
     const dispatch: Dispatch<Action> = useDispatch();
 
-    const [value, setValue] = useState("");
+    const [value, setValue] = useState(todo!.text);
     return (
         <div>
             <input type="text" onChange={(e) => setValue(e.currentTarget.value)} value={value} />
