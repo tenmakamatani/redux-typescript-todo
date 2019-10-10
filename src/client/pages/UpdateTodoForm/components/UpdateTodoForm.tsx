@@ -1,15 +1,18 @@
 import * as React from "react";
 import { useState } from "react";
-import { Redirect } from "react-router";
+import { RouteComponentProps } from "react-router";
 
 import { ITodo } from "$types/todo";
 
-interface IProps {
+interface IProps extends RouteComponentProps {
     todo: ITodo;
     updateTodo: (id: number, text: string) => any;
 }
 
 export default (props: IProps) => {
+    if (!props.todo) {
+        props.history.push("/");
+    }
     const [value, setValue] = useState("");
     return (
         <div>
@@ -17,7 +20,7 @@ export default (props: IProps) => {
             <button onClick={ () => {
                 props.updateTodo(props.todo.id, value);
                 setValue("");
-                <Redirect to="/"></Redirect>
+                props.history.push("/");
             } }>Update</button>
         </div>
     )

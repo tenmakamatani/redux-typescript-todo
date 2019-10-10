@@ -1,5 +1,5 @@
 import { RouteComponentProps } from "react-router-dom";
-import { ITodoState } from "./todo";
+import { ITodoState } from "$types/todo";
 
 export default interface IState {
     router: RouteComponentProps;
